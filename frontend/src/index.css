@@ -5,21 +5,37 @@
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  
   --font-body: 'Source Sans 3', 'Trebuchet MS', sans-serif;
   --font-heading: 'Space Grotesk', 'Avenir Next', sans-serif;
-  --color-navy: #0e1f35;
-  --color-ink: #1f2b36;
-  --color-slate: #516073;
-  --color-cream: #fcf9f1;
-  --color-gold: #c5ad71;
-  --color-mint: #60a68c;
-  --color-coral: #d67b66;
-  --page-shadow: 0 2rem 5rem rgba(14, 31, 53, 0.08);
-  color: var(--color-ink);
-  background:
-    radial-gradient(circle at top left, rgba(197, 173, 113, 0.25), transparent 28%),
-    radial-gradient(circle at 85% 20%, rgba(96, 166, 140, 0.18), transparent 22%),
-    linear-gradient(180deg, #f7f3e8 0%, #f5f8fb 52%, #eef4f5 100%);
+  
+  /* Vibrant Dark Mode Palette */
+  --color-bg: #0b0f1a;
+  --color-surface: #161e2d;
+  --color-surface-hover: #1e293b;
+  --color-text: #f8fafc;
+  --color-text-dim: #94a3b8;
+  --color-navy: #1e293b;
+  --color-ink: #f8fafc;
+  --color-slate: #94a3b8;
+  --color-cream: #f1f5f9;
+  
+  /* Vibrant Accents */
+  --color-cyan: #22d3ee;
+  --color-purple: #c084fc;
+  --color-gold: #fbbf24;
+  --color-mint: #34d399;
+  --color-coral: #fb7185;
+  
+  --page-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
+  --glass-bg: rgba(22, 30, 45, 0.7);
+  --glass-border: rgba(255, 255, 255, 0.05);
+
+  color: var(--color-text);
+  background: 
+    radial-gradient(circle at 0% 0%, rgba(34, 211, 238, 0.15) 0%, transparent 40%),
+    radial-gradient(circle at 100% 0%, rgba(192, 132, 252, 0.15) 0%, transparent 40%),
+    var(--color-bg);
 }
 
 * {
@@ -34,8 +50,9 @@ body {
   margin: 0;
   min-width: 20rem;
   font-family: var(--font-body);
-  color: var(--color-ink);
-  background: transparent;
+  color: var(--color-text);
+  background: var(--color-bg);
+  min-height: 100vh;
 }
 
 img {
@@ -47,6 +64,7 @@ button,
 input,
 textarea {
   font: inherit;
+  color: inherit;
 }
 
 a {
@@ -59,12 +77,15 @@ h2,
 h3 {
   margin: 0;
   font-family: var(--font-heading);
-  line-height: 1.05;
-  color: var(--color-navy);
+  line-height: 1.1;
+  color: var(--color-text);
 }
 
 h1 {
   font-size: clamp(2.3rem, 6vw, 4.5rem);
+  background: linear-gradient(135deg, #fff 0%, var(--color-cyan) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 h2 {
@@ -72,16 +93,19 @@ h2 {
 }
 
 h3 {
-  font-size: 1.1rem;
+  font-size: 1.2rem;
 }
 
 p {
   margin: 0;
-  color: var(--color-slate);
-  font-size: 1rem;
-  line-height: 1.65;
+  color: var(--color-text-dim);
+  font-size: 1.05rem;
+  line-height: 1.7;
 }
 
 code {
   font-family: 'SFMono-Regular', 'Consolas', 'Liberation Mono', monospace;
+  background: rgba(255, 255, 255, 0.1);
+  padding: 0.2rem 0.4rem;
+  border-radius: 4px;
 }
