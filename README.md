@@ -1,5 +1,9 @@
 # Student Team Manager Frontend
 
+Rohit Ranjan (RA2311056010065)
+Harsh Kumar (RA2311056010079)
+Abhilove Goyal (RA2311056010083)
+
 This workspace contains a responsive React frontend for the backend contract described in `/Users/rohitranjan/Downloads/PROJECT_PLAN_README.md`.
 
 ## Frontend stack
