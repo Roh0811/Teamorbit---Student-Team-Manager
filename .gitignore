@@ -4,3 +4,6 @@ dist/
 tmp/
 frontend/node_modules/
 frontend/dist/
+backend/node_modules/
+backend/.env
+.env
